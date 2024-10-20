@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Declaring Thymeleaf namespace for Spring template -->
 <head>
   <title>Registration</title>
+  <!-- Linking to the external CSS file using Thymeleaf's th:href attribute -->
   <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
+
+<!-- Page heading for the registration form -->
 <h1>Registration</h1>
+
+<!-- Registration form posting to the /registration endpoint with Thymeleaf object binding -->
 <form th:action="@{/registration}" th:object="${user}" method="post">
+  <!-- Username input field, bound to the username property in the user object -->
   <input type="text" th:field="*{username}" placeholder="Username" required />
+
+  <!-- Email input field, bound to the email property in the user object -->
   <input type="email" th:field="*{email}" placeholder="Email" required />
+
+  <!-- Password input field, bound to the password property in the user object -->
   <input type="password" th:field="*{password}" placeholder="Password" required />
-  <button type="submit">Registration</button>
+
+  <!-- Submit button for the form -->
+  <button type="submit">Register</button>
 </form>
+
+<!-- Link for users who already have an account to navigate to the login page -->
 <a href="/login">Already have an account? Login here.</a>
 
+<!-- Error message (if any) displayed in red, populated by Thymeleaf -->
 <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
 </body>
 </html>

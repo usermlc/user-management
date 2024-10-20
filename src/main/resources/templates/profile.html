@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Declaring Thymeleaf namespace for Spring template -->
 <head>
   <title>Profile</title>
+  <!-- Linking to the external CSS file located at /css/main.css -->
   <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-  <h1>User Profile</h1>
-  <p>Username: <span th:text="${username}"></span></p>
-  <p>Email: <span th:text="${email}"></span></p>
 
-  <a href="/logout">Logout</a>
+<!-- Page heading for the user profile -->
+<h1>User Profile</h1>
+
+<!-- Displaying the username dynamically using Thymeleaf -->
+<p>Username: <span th:text="${username}"></span></p>
+
+<!-- Displaying the email dynamically using Thymeleaf -->
+<p>Email: <span th:text="${email}"></span></p>
+
+<!-- Logout link for the user to end the session -->
+<a href="/logout">Logout</a>
+
 </body>
 </html>

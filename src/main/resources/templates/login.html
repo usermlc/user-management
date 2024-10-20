@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Declaring Thymeleaf namespace for Spring template -->
 <head>
   <title>Login</title>
+  <!-- Linking to the external CSS file located at /css/main.css -->
   <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
+
+<!-- Page heading for the login form -->
 <h1>Login</h1>
+
+<!-- Login form posting to the /login endpoint -->
 <form th:action="@{/login}" method="post">
   <div>
+    <!-- Username input with required validation -->
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required />
   </div>
   <div>
+    <!-- Password input with required validation -->
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required />
   </div>
+  <!-- Submit button for the form -->
   <button type="submit">Login</button>
 </form>
 
+<!-- A separator for login options -->
 <h2>Or</h2>
+
+<!-- OAuth2 Google login link -->
 <p>
   <a th:href="@{/oauth2/authorization/google}">Login with Google</a>
 </p>
 
+<!-- Error message (if any) displayed in red, populated by the Thymeleaf template -->
 <p th:if="${error}" th:text="${error}" style="color:red;"></p>
 
 </body>

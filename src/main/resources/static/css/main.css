@@ -1,70 +1,79 @@
-/* Reset default styles */
+/* Reset default styles for consistency across browsers */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body styling with new background and text color */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #e9ecef; /* Soft light gray background */
+  color: #343a40; /* Darker gray text for readability */
   padding: 20px;
 }
 
-/* Center the main content */
+/* Center the headings and add spacing */
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #495057; /* Medium-dark gray for heading */
 }
 
 h2 {
   text-align: center;
   margin-top: 10px;
+  color: #495057;
 }
 
-/* Style for forms */
+/* Form styling with new background, padding, and shadow */
 form {
-  background: white;
+  background: #ffffff; /* White form background */
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   max-width: 400px;
   margin: 0 auto; /* Center the form */
 }
 
+/* Form element spacing */
 form div {
   margin-bottom: 15px;
 }
 
+/* Label styling */
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #212529; /* Dark gray label text */
 }
 
+/* Input fields with border, padding, and new colors */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #adb5bd; /* Light gray border */
   border-radius: 5px;
   font-size: 16px;
+  background-color: #f8f9fa; /* Light gray background for input fields */
 }
 
+/* Input fields on focus */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-color: #007bff;
+  border-color: #28a745; /* Green border when focused */
   outline: none;
 }
 
-/* Button styles */
+/* Button styles with updated colors */
 button {
-  background-color: #007bff;
+  background-color: #28a745; /* Green button background */
   color: white;
   padding: 10px;
   border: none;
@@ -75,15 +84,15 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #218838; /* Darker green on hover */
 }
 
-/* Link styles */
+/* Link styling */
 a {
   display: block;
   text-align: center;
   margin-top: 10px;
-  color: #007bff;
+  color: #007bff; /* Blue link color */
   text-decoration: none;
 }
 
@@ -91,21 +100,23 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Profile section */
+/* Profile section styling */
 .profile {
-  background: white;
+  background: #ffffff; /* White background for profile */
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
   max-width: 400px;
   margin: 0 auto; /* Center the profile section */
 }
 
+/* Profile text styling */
 .profile p {
   margin-bottom: 10px;
+  color: #343a40; /* Dark gray text */
 }
 
-/* Error message styling */
+/* Error message styling in red */
 p[style*="color:red"] {
   color: red;
   text-align: center;
